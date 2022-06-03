@@ -18,11 +18,15 @@ for (let i=0; i<N; i++) {
         cell.addEventListener("mousedown", e=> {
             if (e.buttons == 0) {
                 e.target.style.backgroundColor = color;   
+            } else if (e.buttons == 4) {
+                e.target.style.backgroundColor = null;
             }
         })
         cell.addEventListener("mousemove", (e)=> {
             if (e.buttons == 1) {
                 e.target.style.backgroundColor = color;
+            } else if (e.buttons == 4) {
+                e.target.style.backgroundColor = null;
             }
         })
         row.appendChild(cell);
