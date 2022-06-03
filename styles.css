@@ -1,0 +1,21 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+.grid {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.cell {
+    width:20px;
+    height: 20px;
+    border: 1px solid white;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
