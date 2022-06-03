@@ -10,7 +10,7 @@ let color = "#415A77";
 
 sizeButton.addEventListener('click', e => {
     let input = parseInt(prompt("Creating an n by n grid. Enter the value of n"));
-    if (input > 100 || input < 0) {
+    if (input > 100 || input <= 0) {
         alert("Please give a value of N 1 and 100 (both included)");
     } else {
         window.N = input;
