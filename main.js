@@ -2,9 +2,12 @@ const grid = document.querySelector('.grid');
 const sizeButton = document.querySelector('#size');
 const clearButton = document.querySelector('#clear');
 const borderButton = document.querySelector('#border');
+const colorPicker = document.querySelector('#color')
 let showBorders = false;
 
 window.N = 15;
+let color = "#415A77";
+
 sizeButton.addEventListener('click', e => {
     let input = parseInt(prompt("Creating an n by n grid. Enter the value of n"));
     if (input > 100 || input < 0) {
@@ -19,7 +22,10 @@ clearButton.addEventListener('click', e => {
     generateNewGrid(window.N);
 })
 
-let color = "#415A77";
+colorPicker.addEventListener('input', e=> {
+    color = e.target.value;
+})
+
 generateNewGrid(window.N);
 function generateNewGrid(n) {
     while (grid.firstChild) {
