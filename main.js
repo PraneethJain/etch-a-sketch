@@ -1,6 +1,7 @@
 const grid = document.querySelector('.grid');
 
 let N = 16;
+let color = "#0000ff"
 
 for (let i=0; i<N; i++) {
     const row = document.createElement('div')
@@ -12,7 +13,17 @@ for (let i=0; i<N; i++) {
             e.target.classList.add('active');
         });
         cell.addEventListener("mouseleave", e=> {
-            e.target.classList.remove("active")
+            e.target.classList.remove("active");
+        })
+        cell.addEventListener("mousedown", e=> {
+            if (e.buttons == 0) {
+                e.target.style.backgroundColor = color;   
+            }
+        })
+        cell.addEventListener("mousemove", (e)=> {
+            if (e.buttons == 1) {
+                e.target.style.backgroundColor = color;
+            }
         })
         row.appendChild(cell);
     }
