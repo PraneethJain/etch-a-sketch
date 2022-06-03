@@ -12,7 +12,7 @@ sizeButton.addEventListener('click', e => {
     let input = parseInt(prompt("Creating an n by n grid. Enter the value of n"));
     if (input > 100 || input <= 0) {
         alert("Please give a value of N 1 and 100 (both included)");
-    } else {
+    } else if (input){
         window.N = input;
     }
     generateNewGrid(window.N);
