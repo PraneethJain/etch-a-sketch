@@ -18,4 +18,5 @@ body {
 .row {
     display: flex;
     flex-direction: row;
+    width: fit-content;
 }
