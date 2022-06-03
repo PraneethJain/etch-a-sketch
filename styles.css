@@ -1,14 +1,17 @@
 body {
-    background-color: black;
+    background-color: #03071E;
     color: white;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    padding: 50px;
+    padding: 10px 50px 50px 50px;
 }
 
 .grid {
     display: flex;
     flex-direction: column;
+    margin: 20px;
 }
 
 
@@ -26,4 +29,12 @@ body {
 
 .active {
     background-color: blue;
+}
+
+.size {
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bolder;
+    background-color: #370617;
+    color: #FAA307;
 }
